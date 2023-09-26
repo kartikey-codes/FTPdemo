@@ -5,7 +5,7 @@ if ($_FILES["file"]["error"] > 0) {
     $ftp_server = "your host name";
     $ftp_username = "your username";
     $ftp_password = 'your password';
-    $upload_dir = "/";
+    $upload_dir = "/"; // eg "/htdocs/","/" the path on the remote site from where you want to upload the file.
     $file_name = $_FILES["file"]["name"];
     $file_temp = $_FILES["file"]["tmp_name"];
     
