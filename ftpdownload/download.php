@@ -1,9 +1,9 @@
 <?php
 
-$ftp_server = "ftpupload.net";
-$ftp_username = "b24_34866803";
-$ftp_password = 'u22xf$z6';
-$download_dir = "/htdocs/"; // eg "/htdocs/","/"
+$ftp_server = "your host name";
+$ftp_username = "your username";
+$ftp_password = 'your password';
+$download_dir = "/htdocs/"; // eg "/htdocs/","/" the path on the remote site from where you want to download the file.
 $file_name = $_POST["file"];
 
 
