@@ -9,7 +9,7 @@ Before running this project, you need to have XAMPP installed on your system. XA
 ## Installation
 
 1. **Clone the Repository:**
-<git clone https://github.com/your-username/ftpdemo.git>
+git clone https://github.com/your-username/ftpdemo.git
 
 
 2. **Copy to XAMPP `htdocs` Directory:**
