@@ -2,9 +2,9 @@
 if ($_FILES["file"]["error"] > 0) {
     echo "Error: " . $_FILES["file"]["error"];
 } else {
-    $ftp_server = "ftpupload.net";
-    $ftp_username = "b24_34866803";
-    $ftp_password = 'u22xf$z6';
+    $ftp_server = "your host name";
+    $ftp_username = "your username";
+    $ftp_password = 'your password';
     $upload_dir = "/";
     $file_name = $_FILES["file"]["name"];
     $file_temp = $_FILES["file"]["tmp_name"];
