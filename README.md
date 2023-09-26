@@ -1,6 +1,6 @@
 # FTPDemo Repository
 
-This repository is a demonstration of how to upload and download files from an FTP server using PHP. It consists of two main folders: `ftp upload` for uploading files to the FTP server and `FTPdownload` for downloading files from the FTP server.
+This repository is a demonstration of how to upload and download files from an FTP server using PHP. It consists of two main folders: `ftpupload` for uploading files to the FTP server and `ftpdownload` for downloading files from the FTP server.
 
 ## Prerequisites
 
