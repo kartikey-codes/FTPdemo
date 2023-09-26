@@ -22,7 +22,7 @@ Start the XAMPP control panel and ensure that the Apache server is running.
 
 4. **Access the Project:**
 
-Open a web browser and navigate to `http://localhost/ftpdemo/ftp%20upload/index.html` to access the FTP file upload page and `http://localhost/ftpdemo/FTPdownload/index.html` to access the FTP file download page.
+Open a web browser and navigate to `http://localhost/ftpdemo/ftpupload/index.html` to access the FTP file upload page and `http://localhost/ftpdemo/ftpdownload/index.html` to access the FTP file download page.
 
 ## FTP Server Configuration
 
