@@ -16,7 +16,7 @@ if ($conn_id) {
         ftp_pasv($conn_id, true); // Enable passive mode
 
         $remote_file_path = $download_dir . $file_name;
-        $local_file_path = "C:/Users/Kartikey/Desktop/internship/download/" . $file_name; 
+        $local_file_path = "C:/Users/your-username/Desktop/download/" . $file_name; //path where you want to save your downloaded file from server
 
         $download_result = ftp_get($conn_id, $local_file_path, $remote_file_path, FTP_BINARY);
 
