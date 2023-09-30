@@ -53,6 +53,10 @@ Feel free to explore the `ftpdemo` repository and use it as a reference for FTP 
 
 Welcome to the Hacktoberfest 2023 contributions for this project! We appreciate your interest in improving and enhancing our codebase. Here are several ways you can contribute:
 
+**Work on Issues**: You can go to the [Issues](https://github.com/kartikey-codes/FTPdemo/issues) section, where you'll find a list of existing issues. You can choose to work on any of these issues or open new ones if you discover any problems.
+
+## **OR**
+
 1. **Improve User Interface**: Enhance the user experience by refining the HTML and CSS for the upload and download pages.
 
 2. **Add Validation**: Implement both client-side and server-side validation to ensure secure and accurate user input.
