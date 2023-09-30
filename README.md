@@ -81,7 +81,7 @@ To contribute, please follow these steps:
 
 4. Push your changes to your fork: `git push origin feature/add-new-feature`
 
-5. Create a **pull request (PR)** to merge your changes into the main repository.
+5. Create a **pull request (PR)** to merge your changes into the main repository..
 
 6. Await review from the maintainer, and I will handle the merging process.
 
