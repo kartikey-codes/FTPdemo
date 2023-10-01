@@ -1,1 +1,1 @@
-### Combined Website for downloading/uploading on a FTP server through a single website
+### Combined Website for downloading/uploading to a FTP server 
