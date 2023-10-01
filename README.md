@@ -55,7 +55,7 @@ Welcome to the Hacktoberfest 2023 contributions for this project! We appreciate 
 
 **Work on Issues**: You can go to the [Issues](https://github.com/kartikey-codes/FTPdemo/issues) section, where you'll find a list of existing issues. You can choose to work on any of these issues or open new ones if you discover any problems.
 
-## **OR**
+##                                                 **OR**
 
 1. **Improve User Interface**: Enhance the user experience by refining the HTML and CSS for the upload and download pages.
 
