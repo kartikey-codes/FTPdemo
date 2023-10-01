@@ -52,7 +52,7 @@ Feel free to explore the `ftpdemo` repository and use it as a reference for FTP 
 # Hacktoberfest Contributions
 
 Welcome to the Hacktoberfest 2023 contributions for this project! We appreciate your interest in improving and enhancing our codebase. Here are several ways you can contribute:
-
+📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free SWAGS 🔥.**
 **Work on Issues**: You can go to the [Issues](https://github.com/kartikey-codes/FTPdemo/issues) section, where you'll find a list of existing issues. You can choose to work on any of these issues or open new ones if you discover any problems.
 
 ##                                                 **OR**
