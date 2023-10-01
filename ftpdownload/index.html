@@ -1,80 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>FTP File Download</title>
-    </head>
-    <body>
-        <div id="main">
-            <h1>Download a File from FTP Server</h1>
-            <div id="download_form">
-                <form action="download.php" method="post">
-                    <label for="file">Enter the filename to download :</label>
-                    <input type="text" name="file" id="file"><br>
-                    <div id="button">
-                        <input type="submit" value="Download">
-                    </div>
-                </form>
+<head>
+    <title>FTP File Download</title>
+</head>
+<style>
+    body {
+        background-color: #E4F9F5;
+        padding-top: 100px;
+        text-align: center;
+    }
+    .h1 {
+        font-size: 48px;
+    }
+    .padding-bottom--24 {
+        padding-bottom: 24px;
+    }
+    .header {
+        font-size: 24px;
+        padding-top: 8px;
+    }
+    .field input {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 8px 16px;
+        width: 25%;
+    }
+    input[type="submit"] {
+        background-color: #66BFBF;
+        box-shadow: #11999E 0px 0px 0px 1px;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <h1>Download a File from FTP Server</h1>
+    <form action="download.php" method="post">
+        <div class="field padding-bottom--24">
+            <div class="header">
+                <label for="file">Enter the filename to download:</label>
             </div>
+            <input type="text" name="file" id="file">
         </div>
-        
-    </body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #000000;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            color: #000000;
-        }
-
-        #main{
-            margin: 0;
-            position: absolute;
-            top: 30%;
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-            left: 50%;
-            -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-            
-        }
-
-        form {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            text-align: left;
-        }
-
-        #button{
-            display: flex;
-            justify-content: space-evenly;
-        } 
-
-        input[type="file"]{
-            display: block;
-            margin: 10px auto;
-        }
-
-        input[type="submit"] {
-            margin-top: 20px;
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
+        <div class="field padding-bottom--24">
+            <input type="submit" value="Download">
+        </div>
+    </form>
+</body>
 </html>
