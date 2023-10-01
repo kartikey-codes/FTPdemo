@@ -43,7 +43,7 @@ To use this project with your FTP server, you'll need to modify the FTP server c
 
 ## Medium Article
 
-For detailed instructions on setting up your own FTP server and configuring FileZilla, you can refer to our Medium article: [Link to Medium Article](https://medium.com/your-article).
+For detailed instructions on setting up your own FTP server and configuring FileZilla, you can refer to our Medium article: [Link to Medium Article](https://medium.com/mozilla-firefox-club/a-comprehensive-guide-creating-your-own-free-ftp-server-and-mastering-upload-download-with-php-8db5e21ad097).
 
 In the article, you'll find information on how to obtain your FTP server hostname, username, and password, or use existing credentials for testing.
 
