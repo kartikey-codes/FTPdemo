@@ -2,38 +2,37 @@
 <html>
 <head>
     <title>FTP File Download</title>
+    <style>
+        body {
+            background-color: #E4F9F5;
+            padding-top: 100px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        .padding-bottom--24 {
+            padding-bottom: 24px;
+        }
+        .header {
+            font-size: 24px;
+            padding-top: 8px;
+        }
+        .field input {
+            font-size: 16px;
+            line-height: 16px;
+            padding: 8px 16px;
+            width: 25%;
+        }
+        input[type="submit"] {
+            background-color: #66BFBF;
+            box-shadow: #11999E 0px 0px 0px 1px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<style>
-    body {
-        background-color: #E4F9F5;
-        padding-top: 100px;
-        text-align: center;
-    }
-    .h1 {
-        font-size: 48px;
-    }
-    .padding-bottom--24 {
-        padding-bottom: 24px;
-    }
-    .header {
-        font-size: 24px;
-        padding-top: 8px;
-    }
-    .field input {
-        font-size: 16px;
-        line-height: 16px;
-        padding: 8px 16px;
-        width: 25%;
-    }
-    input[type="submit"] {
-        background-color: #66BFBF;
-        box-shadow: #11999E 0px 0px 0px 1px;
-        color: #fff;
-        font-weight: 600;
-        cursor: pointer;
-    }
-</style>
-
 <body>
     <h1>Download a File from FTP Server</h1>
     <form action="download.php" method="post">
