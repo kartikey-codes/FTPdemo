@@ -1,30 +1,78 @@
-
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #ffffff;
-    text-align: center;
-
+    font-family:'Courier New', Courier, monospace;;
+    width:auto;
+    height: 100vh;
+    background-color: #ccc;
 }
 
-#main {
+.container,
+.forms{
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.4s ease-in-out;
 }
+
+.choice {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+span{
+    font-size: 30px;
+}
+
+#upload_div,
+#download_div{
+    width:40%;
+    border: #fff 2px;
+    border-radius: 5px;
+    background-color: #579de7;
+}
+
+#upload,
+#download{
+    width:100%;
+    height: 100%;
+    background-color: #579de7;
+    border: 0px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#upload:hover,
+#download:hover{
+    border: 0px;
+    background-color:#007bff ;
+    color: #fff;
+    font-weight: 200;
+    border-radius: 10px;
+    box-shadow: 0;
+    transform: scale(1.5);
+}
+
 
 h1 {
     color: #000000;
     font-size: 28px;
 }
 
-#download_form,
-#upload_form {
+.download-form,
+.upload-form {
     background-color: rgb(255, 255, 255);
     padding: 20px;
     box-shadow: 0 0 0px rgba(0, 0, 0, 10);
-    display: inline-block;
+    display: none;
     text-align: center;
+    transition: transform 0.4s ease-in-out;
 }
 
 label {
@@ -75,4 +123,15 @@ hr{
     height:1px;
     border-width:0;
     border-top: 2px dashed rgb(0, 0, 0);
+}
+
+.forms,
+#upload_form,
+#download_form{
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+h2 {
+    margin-top: 20px;
 }
