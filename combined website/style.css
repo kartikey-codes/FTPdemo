@@ -1,0 +1,78 @@
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffffff;
+    text-align: center;
+
+}
+
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: #000000;
+    font-size: 28px;
+}
+
+#download_form,
+#upload_form {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 10);
+    display: inline-block;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-input {
+    transition: transform 0.2s ease-in-out;
+    background-color: #c90000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.file-input:hover {
+    transform: scale(1.2);
+    background-color: #e40000;
+}
+
+input[type="submit"] {
+    background-color: #c90000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]
+{
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.2);
+    background-color: #e40000;
+}
+
+hr{
+    height:1px;
+    border-width:0;
+    border-top: 2px dashed rgb(0, 0, 0);
+}
