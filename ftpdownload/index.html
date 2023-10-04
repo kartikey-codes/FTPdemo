@@ -3,60 +3,57 @@
 <head>
     <title>FTP File Download</title>
     <style>
+        /* Global styles */
         body {
             background: linear-gradient(135deg, #E4F9F5, #D4EEEC, #E4F9F5, #D4EEEC, #E4F9F5);
-            background-size: 500% 500%; /* Adjust background size */
+            background-size: 500% 500%;
             animation: gradientAnimation 10s linear infinite;
-            padding-top: 100px;
-            text-align: center;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
+        /* Header styles */
         h1 {
             font-size: 48px;
             color: #333;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-top: 100px;
+            text-align: center;
         }
-        .padding-bottom--24 {
-            padding-bottom: 24px;
+
+        /* Form container styles */
+        .form-container {
+            text-align: center;
+            padding-top: 20px;
         }
-        .header {
-            font-size: 24px;
-            padding-top: 8px;
-            color: #555;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        }
+
+        /* Field styles */
         .field {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 24px;
         }
-        .field input {
+
+        /* Input styles */
+        .field input[type="text"] {
             font-size: 16px;
             line-height: 24px;
             padding: 10px 16px;
-            width: 48%;
+            width: 50%;
             border: 2px solid #66BFBF;
             border-radius: 5px;
             transition: box-shadow 0.3s ease, color 0.3s ease;
             outline: none;
         }
-        .field input:hover {
+
+        .field input[type="text"]:hover {
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
         }
-        input[type="submit"] {
+
+        /* Submit button styles */
+        .field input[type="submit"] {
             background-color: #66BFBF;
             box-shadow: #11999E 0px 0px 0px 1px;
             color: #fff;
@@ -70,21 +67,47 @@
             outline: none;
             width: 50%;
         }
-        input[type="submit"]:hover {
+
+        .field input[type="submit"]:hover {
             background-color: #4FAAAA;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
             color: #fff;
         }
-        .rtl-text {
+
+        /* Label styles */
+        .field label {
+            font-size: 24px;
+            color: #555;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animated text styles */
+        .animated-text {
             display: inline-block;
             opacity: 0;
             animation: fadeIn 2s ease forwards;
             color: #66BFBF;
         }
-        .ut {
-            text-align: center; /* Center-align the label text */
+
+        /* Center-align label text */
+        .text-center {
+            text-align: center;
         }
-    
+
+        /* Gradient animation */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Fade-in animation */
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -96,17 +119,17 @@
     </style>
 </head>
 <body>
-    <h1>Download a File from<span style="color: #66BFBF;"></span> <span class="rtl-text">FTP Server</span></h1>
-    <form action="download.php" method="post">
-        <div class="field padding-bottom--24">
-            <div class="header">
-                <label for="file" class="ut">Enter the filename to <span style="color: #66BFBF;">download</span>:</label>
+    <h1>Download a File from<span style="color: #66BFBF;"></span> <span class="animated-text">FTP Server</span></h1>
+    <div class="form-container">
+        <form action="download.php" method="post">
+            <div class="field">
+                <label for="file" class="text-center">Enter the filename to <span style="color: #66BFBF;">download</span>:</label>
+                <input type="text" name="file" id="file" placeholder="Enter filename" />
             </div>
-            <input type="text" name="file" id="file" placeholder="Enter filename" />
-        </div>
-        <div class="field padding-bottom--24">
-            <input type="submit" value="Download" />
-        </div>
-    </form>
+            <div class="field">
+                <input type="submit" value="Download" />
+            </div>
+        </form>
+    </div>
 </body>
 </html>
