@@ -1,34 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Download Page</title>
     <link rel="stylesheet" href="style.css">
-    <title>FTP File-Upload-Download</title>
 </head>
 <body>
-    <div id="main">
-        <h1>Upload a File to FTP Server</h1>
-        <div id="upload_form">
+    <div class="container">
+        <div id="heading"><h1>Welcome to FTP-Demo</h1></div>
+        <h2>What you wish to do ?</h2>
+        <div class="choice">
+            <div id="upload_div">
+                <input type="button" onclick="upld()" name="choice" id="upload" value="UPLOAD">
+            </div>
+            <div>
+                <h2>OR</h2>
+            </div>
+            <div id="download_div">
+                <input type="button" onclick="dwnld()" name="choice" id="download" value="DOWNLOAD">
+            </div>
+        </div>
+    </div>
+    <div class="forms">
+        <div class="upload-form">
+            <h1>Upload a File to FTP Server</h1>
             <form action="upload.php" method="post" enctype="multipart/form-data">
                 <label for="file" class="file-input">Select a file</label>
                 <input type="file" name="file" id="file">
                 <br>
                 <input type="submit" value="Upload">
             </form>
-            <br>
         </div>
-
-        <hr><br>
-        <h1>Download a File from FTP Server</h1>
-        <div id="download_form">
+        <div class="download-form">
+            <h1>Download a File from FTP Server</h1>
             <form action="download.php" method="post" enctype="multipart/form-data">
-                <label for="text" class="file-input">
-                    Enter file name
-                    <input type="text" name="text" id="text">
-                </label>
-                <br>
-                <input type="submit" value="Download">
-            </form>
+            <label for="text" class="file-input">
+                Enter file name
+                <input type="text" name="text" id="text">
+            </label>
+            <br>
+            <input type="submit" value="Download">
         </div>
     </div>
+    
+    <script>
+        function upld() {
+            var container = document.getElementsByClassName("container")[0]; 
+            var forms = document.getElementsByClassName("forms")[0]; 
+            var uploadForm = document.getElementsByClassName("upload-form")[0]; 
+
+            container.style.display = "none";
+            forms.style.display = "inline-block";
+            uploadForm.style.display = "inline-block";
+        }
+        function dwnld(){
+            var container = document.getElementsByClassName("container")[0]; 
+            var forms = document.getElementsByClassName("forms")[0]; 
+            var downloadForm = document.getElementsByClassName("download-form")[0]; 
+
+            container.style.display = "none";
+            forms.style.display = "inline-block";
+            downloadForm.style.display = "inline-block";
+
+        }
+    </script>
 </body>
 </html>
