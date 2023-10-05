@@ -1,9 +1,7 @@
-
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #ffffff;
     text-align: center;
-
 }
 
 #main {
@@ -18,13 +16,13 @@ h1 {
     font-size: 28px;
 }
 
-#download_form,
-#upload_form {
-    background-color: rgb(255, 255, 255);
+.form-container {
+    background-color: #fff;
     padding: 20px;
-    box-shadow: 0 0 0px rgba(0, 0, 0, 10);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 label {
@@ -37,7 +35,7 @@ input[type="file"] {
     display: none;
 }
 
-.file-input {
+.button {
     transition: transform 0.2s ease-in-out;
     background-color: #c90000;
     color: #fff;
@@ -47,32 +45,13 @@ input[type="file"] {
     cursor: pointer;
 }
 
-.file-input:hover {
+.button:hover {
     transform: scale(1.2);
     background-color: #e40000;
 }
 
-input[type="submit"] {
-    background-color: #c90000;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type="submit"]
-{
-    transition: transform 0.2s ease-in-out;
-}
-
-input[type="submit"]:hover {
-    transform: scale(1.2);
-    background-color: #e40000;
-}
-
-hr{
-    height:1px;
-    border-width:0;
+hr {
+    height: 1px;
+    border-width: 0;
     border-top: 2px dashed rgb(0, 0, 0);
 }
