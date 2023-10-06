@@ -1,0 +1,113 @@
+/* Global styles */
+body {
+    background: linear-gradient(135deg, #E4F9F5, #D4EEEC, #E4F9F5, #D4EEEC, #E4F9F5);
+    background-size: 500% 500%;
+    animation: gradientAnimation 10s linear infinite;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+h1 {
+    font-size: 48px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* Form container styles */
+.form-container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Field styles */
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+/* Input styles */
+.field input[type="text"] {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 16px;
+    width: 50%;
+    border: 2px solid #66BFBF;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+    outline: none;
+}
+
+.field input[type="text"]:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit button styles */
+.field input[type="submit"] {
+    background-color: #66BFBF;
+    box-shadow: #11999E 0px 0px 0px 1px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    padding: 12px 16px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    outline: none;
+    width: 50%;
+}
+
+.field input[type="submit"]:hover {
+    background-color: #4FAAAA;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+/* Label styles */
+.field label {
+    font-size: 24px;
+    color: #555;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated text styles */
+.animated-text {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    color: #66BFBF;
+}
+
+/* Center-align label text */
+.text-center {
+    text-align: center;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
