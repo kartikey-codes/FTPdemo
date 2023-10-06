@@ -3,17 +3,28 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <title>FTP File-Upload</title>
+    <script>
+        function validateForm() {
+            var fileInput = document.getElementById("file");
+            if (fileInput.value === "") {
+                alert("Please select a file.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <div id="main">
         <h1>Upload a File to FTP Server</h1>
         <div id="upload_form">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
+            <form action="upload.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
                 <label for="file" class="file-input">Select a file</label>
                 <input type="file" name="file" id="file">
                 <br>
                 <input type="submit" value="Upload">
             </form>
+            <div id="message" style="display:none;"></div>
         </div>
     </div>
 </body>
