@@ -3,11 +3,21 @@
 <head>
     <title>FTP File Download</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function validateForm() {
+            var filename = document.getElementById("file").value;
+            if (filename == "") {
+                alert("Please enter a filename.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <h1>Download a File from<span style="color: #66BFBF;"></span> <span class="animated-text">FTP Server</span></h1>
     <div class="form-container">
-        <form action="download.php" method="post">
+        <form action="download.php" method="post" onsubmit="return validateForm()">
             <div class="field">
                 <label for="file" class="text-center">Enter the filename to <span style="color: #66BFBF;">download</span>:</label>
                 <input type="text" name="file" id="file" placeholder="Enter filename" />
