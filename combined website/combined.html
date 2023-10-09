@@ -23,6 +23,9 @@
         </div>
     </div>
     <div class="forms">
+        <div id="back_div">
+            <input id="back" type="button" onclick="return_home()" value="Back">
+        </div>
         <div class="upload-form">
             <h1>Upload a File to FTP Server</h1>
             <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -49,7 +52,6 @@
             var container = document.getElementsByClassName("container")[0]; 
             var forms = document.getElementsByClassName("forms")[0]; 
             var uploadForm = document.getElementsByClassName("upload-form")[0]; 
-
             container.style.display = "none";
             forms.style.display = "inline-block";
             uploadForm.style.display = "inline-block";
@@ -62,8 +64,33 @@
             container.style.display = "none";
             forms.style.display = "inline-block";
             downloadForm.style.display = "inline-block";
-
         }
+        function return_home(){
+            var container = document.getElementsByClassName("container")[0]; 
+            var forms = document.getElementsByClassName("forms")[0];
+            var uploadForm = document.getElementsByClassName("upload-form")[0];
+            var downloadForm = document.getElementsByClassName("download-form")[0]; 
+            if(uploadForm.style.display == "inline-block"){
+                uploadForm.style.display = "none";
+            }
+            else{
+                downloadForm.style.display = "none";
+            }
+            container.style.display = "inline-block";
+            forms.style.display = "none";
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            const button = document.getElementById("back");
+            const body = document.body;
+
+            button.addEventListener("mouseover", function() {
+                body.style.backgroundColor = "#F0E68C";
+            });
+
+            button.addEventListener("mouseout", function() {
+                body.style.backgroundColor = "#ffffff"; 
+            });
+        });
     </script>
 </body>
 </html>
