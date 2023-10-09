@@ -3,11 +3,11 @@ body {
     width:auto;
     height: 100vh;
     background-color: #ffffff;
+    transition: background-color 0.4s ease-in-out;
 }
 
 .container,
 .forms{
-    border: 4px solid rgb(255, 255, 255);
     border-radius: 25px;
     margin: 0;
     position: absolute;
@@ -17,6 +17,8 @@ body {
     padding: 20px;
     text-align: center;
     transition: transform 0.4s ease-in-out;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .choice {
@@ -131,4 +133,21 @@ hr{
 
 h2 {
     margin-top: 20px;
+}
+
+#back_div{
+    justify-content: center;
+}
+
+#back{
+    background:#e40000 ;
+    border: 0px;
+    border-radius: 4px;
+    padding: 5px 10px ;
+    transition: transform 0.2s ease-in-out;
+}
+
+#back:hover{
+    transform: scale(1.2);
+    background-color: darkred;
 }
