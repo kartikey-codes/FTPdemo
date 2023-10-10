@@ -1,3 +1,10 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Global styles */
 body {
     background: linear-gradient(135deg, #E4F9F5, #D4EEEC, #E4F9F5, #D4EEEC, #E4F9F5);
