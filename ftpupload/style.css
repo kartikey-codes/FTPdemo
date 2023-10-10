@@ -1,9 +1,18 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the font family and background color for the whole body */
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #ffffff;
     text-align: center;
 }
 
+/* Center the main content */
 #main {
     position: absolute;
     top: 50%;
@@ -11,11 +20,14 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* Style for headings */
 h1 {
     color: #000000;
     font-size: 28px;
+    margin-bottom: 20px; /* Add spacing below headings */
 }
 
+/* Style for form container */
 .form-container {
     background-color: #fff;
     padding: 20px;
@@ -23,18 +35,22 @@ h1 {
     display: inline-block;
     text-align: center;
     margin-bottom: 20px;
+    border-radius: 4px; /* Add rounded corners to the container */
 }
 
+/* Style for labels */
 label {
     display: block;
     margin-bottom: 10px;
     font-size: 18px;
 }
 
+/* Style for file input */
 input[type="file"] {
     display: none;
 }
 
+/* Style for buttons */
 .button {
     transition: transform 0.2s ease-in-out;
     background-color: #c90000;
@@ -45,13 +61,17 @@ input[type="file"] {
     cursor: pointer;
 }
 
+/* Hover effect for buttons */
 .button:hover {
     transform: scale(1.2);
     background-color: #e40000;
 }
 
+/* Style for horizontal rule */
 hr {
     height: 1px;
     border-width: 0;
     border-top: 2px dashed rgb(0, 0, 0);
+    margin-top: 20px; /* Add spacing above the horizontal rule */
+    margin-bottom: 20px; /* Add spacing below the horizontal rule */
 }
