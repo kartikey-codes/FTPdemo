@@ -1,86 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FTP File Upload</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 0;
+    <link rel="stylesheet" href="style.css">
+    <title>FTP File-Upload</title>
+    <script>
+        function validateForm() {
+            var fileInput = document.getElementById("file");
+            if (fileInput.value === "") {
+                alert("Please select a file.");
+                return false;
+            }
+            return true;
         }
-
-        #main {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        h1 {
-            color: #007BFF;
-            font-size: 28px;
-        }
-
-        #upload_form {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            text-align: center;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        input[type="file"] {
-            display: none;
-        }
-
-        .file-input {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .file-input:hover {
-            background-color: #0056b3;
-        }
-
-        input[type="submit"] {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    </script>
 </head>
 <body>
     <div id="main">
         <h1>Upload a File to FTP Server</h1>
         <div id="upload_form">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
+            <form action="upload.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
                 <label for="file" class="file-input">Select a file</label>
                 <input type="file" name="file" id="file">
                 <br>
                 <input type="submit" value="Upload">
             </form>
+            <div id="message" style="display:none;"></div>
         </div>
     </div>
 </body>
