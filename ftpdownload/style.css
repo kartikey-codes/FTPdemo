@@ -8,19 +8,19 @@
 /* Global styles */
 body {
     background: linear-gradient(135deg, #E4F9F5, #D4EEEC, #E4F9F5, #D4EEEC, #E4F9F5);
-    background-size: 500% 500%;
-    animation: gradientAnimation 10s linear infinite;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Header styles */
 h1 {
-    font-size: 48px;
+    font-size: 36px;
     color: #333;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: 100px;
+    margin: 20px;
     text-align: center;
 }
 
@@ -32,10 +32,7 @@ h1 {
 
 /* Field styles */
 .field {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 24px;
+    margin: 20px;
 }
 
 /* Input styles */
@@ -48,6 +45,7 @@ h1 {
     border-radius: 5px;
     transition: box-shadow 0.3s ease, color 0.3s ease;
     outline: none;
+    background: #f0f0f0;
 }
 
 .field input[type="text"]:hover {
@@ -57,7 +55,6 @@ h1 {
 /* Submit button styles */
 .field input[type="submit"] {
     background-color: #66BFBF;
-    box-shadow: #11999E 0px 0px 0px 1px;
     color: #fff;
     font-weight: 600;
     cursor: pointer;
@@ -73,7 +70,6 @@ h1 {
 .field input[type="submit"]:hover {
     background-color: #4FAAAA;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    color: #fff;
 }
 
 /* Label styles */
