@@ -4,23 +4,26 @@ $ftp_server = "your_ftp_server";
 $ftp_username = "your_ftp_username";
 $ftp_password = 'your_ftp_password';
 $download_dir = "/htdocs/";
-$file_name = isset($_POST["file"]) ? $_POST["file"] : null;
 
-if ($file_name !== null) {
+if (isset($_POST["file"])) {
+    $file_name = $_POST["file"];
+
+    // Connect to the FTP server
     $conn_id = ftp_connect($ftp_server);
 
     if ($conn_id) {
+        // Login to the FTP server
         $login_result = ftp_login($conn_id, $ftp_username, $ftp_password);
 
         if ($login_result) {
-            ftp_pasv($conn_id, true); // Enable passive mode
+            // Enable passive mode
+            ftp_pasv($conn_id, true);
 
             $remote_file_path = $download_dir . $file_name;
             $local_file_path = "C:/Users/your-username/Desktop/download/" . $file_name;
 
-            $download_result = ftp_get($conn_id, $local_file_path, $remote_file_path, FTP_BINARY);
-
-            if ($download_result) {
+            // Download the file
+            if (ftp_get($conn_id, $local_file_path, $remote_file_path, FTP_BINARY)) {
                 echo "File downloaded successfully.";
             } else {
                 echo "Download failed.";
@@ -29,6 +32,7 @@ if ($file_name !== null) {
             echo "FTP login failed.";
         }
 
+        // Close the FTP connection
         ftp_close($conn_id);
     } else {
         echo "Could not connect to FTP server.";
