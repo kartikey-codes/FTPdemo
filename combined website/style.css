@@ -1,153 +1,112 @@
-body {
-    font-family:'Courier New', Courier, monospace;;
-    width:auto;
-    height: 100vh;
-    background-color: #ffffff;
-    transition: background-color 0.4s ease-in-out;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Download Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="heading">
+            <h1>Welcome to FTP-Demo</h1>
+        </div>
+        <h2>What do you wish to do ?</h2>
+        <div class="choice">
+            <div id="upload_div">
+                <input type="button" onclick="upld()" name="choice" id="upload" value="UPLOAD">
+            </div>
+            <div>
+                <h2> OR </h2>
+            </div>
+            <div id="download_div">
+                <input type="button" onclick="dwnld()" name="choice" id="download" value="DOWNLOAD">
+            </div>
+        </div>
+    </div>
+    <div class="forms">
+        <div id="back_div">
+            <input id="back" type="button" onclick="return_home()" value="Back">
+        </div>
+        <div class="upload-form">
+            <h1>Upload a File to FTP Server</h1>
+            <form action="upload.php" method="post" enctype="multipart/form-data" onsubmit="uploadFile(); return false;">
+                <label for="file" class="file-input">Select a file</label>
+                <input type="file" name="file" id="file">
+                <br>
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+        <div class="download-form">
+            <h1>Download a File from FTP Server</h1>
+            <form action="download.php" method="post" enctype="multipart/form-data" onsubmit="downloadFile(); return false;">
+                <label for="text" class="file-input">
+                    Enter file name
+                    <input type="text" name="text" id="text">
+                </label>
+                <br>
+                <input type="submit" value="Download">
+            </form>
+        </div>
+    </div>
+    <div id="message" style="display: none;"></div>
+    
+    <script>
+        function upld() {
+            var container = document.getElementsByClassName("container")[0]; 
+            var forms = document.getElementsByClassName("forms")[0]; 
+            var uploadForm = document.getElementsByClassName("upload-form")[0]; 
+            container.style.display = "none";
+            forms.style.display = "inline-block";
+            uploadForm.style.display = "inline-block";
+        }
+        function dwnld(){
+            var container = document.getElementsByClassName("container")[0]; 
+            var forms = document.getElementsByClassName("forms")[0]; 
+            var downloadForm = document.getElementsByClassName("download-form")[0]; 
 
-.container,
-.forms{
-    border-radius: 25px;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.4s ease-in-out;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+            container.style.display = "none";
+            forms.style.display = "inline-block";
+            downloadForm.style.display = "inline-block";
+        }
+        function return_home(){
+            var container = document.getElementsByClassName("container")[0]; 
+            var forms = document.getElementsByClassName("forms")[0];
+            var uploadForm = document.getElementsByClassName("upload-form")[0];
+            var downloadForm = document.getElementsByClassName("download-form")[0]; 
+            if(uploadForm.style.display == "inline-block"){
+                uploadForm.style.display = "none";
+            }
+            else{
+                downloadForm.style.display = "none";
+            }
+            container.style.display = "inline-block";
+            forms.style.display = "none";
+        }
+        
+        function showSuccessMessage(message) {
+            var messageDiv = document.getElementById("message");
+            messageDiv.innerHTML = message;
+            messageDiv.style.display = "block";
 
-.choice {
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-evenly;
-}
+            // Hide the message after 5 seconds
+            setTimeout(function () {
+                messageDiv.style.display = "none";
+                messageDiv.innerHTML = "";
+            }, 5000);
+        }
 
-span{
-    font-size: 30px;
-}
+        function uploadFile() {
+            // Perform your file upload logic here
+            // Assuming the upload is successful, show a success message
+            showSuccessMessage("File uploaded successfully!");
+        }
 
-#upload_div,
-#download_div{
-    width:40%;
-    border: #fff 2px;
-    border-radius: 5px;
-    background-color: #c90000;;
-}
-
-#upload,
-#download{
-    width:100%;
-    height: 100%;
-    background-color: #c90000;
-    border: 0px;
-    border-radius: 2px;
-    transition: transform 0.2s ease-in-out;
-}
-
-#upload:hover,
-#download:hover{
-    border: 0px;
-    background-color:#e40000;
-    color: #fff;
-    font-weight: 200;
-    border-radius: 5px;
-    transform: scale(1.2);
-}
-
-
-h1 {
-    color: #000000;
-    font-size: 28px;
-}
-
-.download-form,
-.upload-form {
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    display: none;
-    text-align: center;
-    transition: transform 0.4s ease-in-out;
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-input[type="file"] {
-    display: none;
-}
-
-.file-input {
-    transition: transform 0.2s ease-in-out;
-    background-color: #c90000;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.file-input:hover {
-    transform: scale(1.2);
-    background-color: #e40000;
-}
-
-input[type="submit"] {
-    background-color: #c90000;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type="submit"]
-{
-    transition: transform 0.2s ease-in-out;
-}
-
-input[type="submit"]:hover {
-    transform: scale(1.2);
-    background-color: #e40000;
-}
-
-hr{
-    height:1px;
-    border-width:0;
-    border-top: 2px dashed rgb(0, 0, 0);
-}
-
-.forms,
-#upload_form,
-#download_form{
-    display: none;
-    transition: opacity 0.5s ease-in-out;
-}
-
-h2 {
-    margin-top: 20px;
-}
-
-#back_div{
-    justify-content: center;
-}
-
-#back{
-    background:#e40000 ;
-    border: 0px;
-    border-radius: 4px;
-    padding: 5px 10px ;
-    transition: transform 0.2s ease-in-out;
-}
-
-#back:hover{
-    transform: scale(1.2);
-    background-color: darkred;
-}
+        function downloadFile() {
+            // Perform your file download logic here
+            // Assuming the download is successful, show a success message
+            showSuccessMessage("File downloaded successfully!");
+        }
+    </script>
+</body>
+</html>
