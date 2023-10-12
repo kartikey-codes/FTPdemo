@@ -5,26 +5,27 @@
     box-sizing: border-box;
 }
 
-/* Set the font family and background color for the whole body */
+/* Global styles */
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
     text-align: center;
 }
 
 /* Center the main content */
 #main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* Style for headings */
 h1 {
-    color: #000000;
-    font-size: 28px;
-    margin-bottom: 20px; /* Add spacing below headings */
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 /* Style for form container */
@@ -32,10 +33,8 @@ h1 {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
     text-align: center;
-    margin-bottom: 20px;
-    border-radius: 4px; /* Add rounded corners to the container */
+    border-radius: 4px;
 }
 
 /* Style for labels */
@@ -53,7 +52,7 @@ input[type="file"] {
 /* Style for buttons */
 .button {
     transition: transform 0.2s ease-in-out;
-    background-color: #c90000;
+    background-color: #0074d9;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -63,8 +62,8 @@ input[type="file"] {
 
 /* Hover effect for buttons */
 .button:hover {
-    transform: scale(1.2);
-    background-color: #e40000;
+    transform: scale(1.05);
+    background-color: #0056a4;
 }
 
 /* Style for horizontal rule */
@@ -72,6 +71,6 @@ hr {
     height: 1px;
     border-width: 0;
     border-top: 2px dashed rgb(0, 0, 0);
-    margin-top: 20px; /* Add spacing above the horizontal rule */
-    margin-bottom: 20px; /* Add spacing below the horizontal rule */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
