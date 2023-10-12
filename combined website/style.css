@@ -5,19 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload and Download Page</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        #heading h1 {
+            font-size: 24px;
+        }
+
+        .choice {
+            margin-top: 20px;
+        }
+
+        #upload_div, #download_div {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .forms {
+            display: none;
+        }
+
+        #back_div {
+            text-align: left;
+        }
+
+        .upload-form, .download-form {
+            display: none;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .file-input {
+            margin-top: 10px;
+        }
+
+        input[type="file"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #0074d9;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #message {
+            display: none;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div id="heading">
             <h1>Welcome to FTP-Demo</h1>
         </div>
-        <h2>What do you wish to do ?</h2>
+        <h2>What do you wish to do?</h2>
         <div class="choice">
             <div id="upload_div">
                 <input type="button" onclick="upld()" name="choice" id="upload" value="UPLOAD">
             </div>
             <div>
-                <h2> OR </h2>
+                <h2>OR</h2>
             </div>
             <div id="download_div">
                 <input type="button" onclick="dwnld()" name="choice" id="download" value="DOWNLOAD">
@@ -50,40 +131,41 @@
         </div>
     </div>
     <div id="message" style="display: none;"></div>
-    
+
     <script>
         function upld() {
-            var container = document.getElementsByClassName("container")[0]; 
-            var forms = document.getElementsByClassName("forms")[0]; 
-            var uploadForm = document.getElementsByClassName("upload-form")[0]; 
+            var container = document.getElementsByClassName("container")[0];
+            var forms = document.getElementsByClassName("forms")[0];
+            var uploadForm = document.getElementsByClassName("upload-form")[0];
             container.style.display = "none";
-            forms.style.display = "inline-block";
+            forms.style display = "inline-block";
             uploadForm.style.display = "inline-block";
         }
-        function dwnld(){
-            var container = document.getElementsByClassName("container")[0]; 
-            var forms = document.getElementsByClassName("forms")[0]; 
-            var downloadForm = document.getElementsByClassName("download-form")[0]; 
+
+        function dwnld() {
+            var container = document.getElementsByClassName("container")[0];
+            var forms = document.getElementsByClassName("forms")[0];
+            var downloadForm = document.getElementsByClassName("download-form")[0];
 
             container.style.display = "none";
             forms.style.display = "inline-block";
             downloadForm.style.display = "inline-block";
         }
-        function return_home(){
-            var container = document.getElementsByClassName("container")[0]; 
+
+        function return_home() {
+            var container = document.getElementsByClassName("container")[0];
             var forms = document.getElementsByClassName("forms")[0];
             var uploadForm = document.getElementsByClassName("upload-form")[0];
-            var downloadForm = document.getElementsByClassName("download-form")[0]; 
-            if(uploadForm.style.display == "inline-block"){
+            var downloadForm = document.getElementsByClassName("download-form")[0];
+            if (uploadForm.style.display == "inline-block") {
                 uploadForm.style.display = "none";
-            }
-            else{
+            } else {
                 downloadForm.style.display = "none";
             }
             container.style.display = "inline-block";
             forms.style.display = "none";
         }
-        
+
         function showSuccessMessage(message) {
             var messageDiv = document.getElementById("message");
             messageDiv.innerHTML = message;
