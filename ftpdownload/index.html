@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>FTP File Download</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function validateForm() {
-            var filename = document.getElementById("file").value;
-            if (filename == "") {
-                alert("Please enter a filename.");
-                return false;
-            }
-            return true;
-        }
-    </script>
-</head>
-<body>
-    <h1>Download a File from<span style="color: #66BFBF;"></span> <span class="animated-text">FTP Server</span></h1>
-    <div class="form-container">
-        <form action="download.php" method="post" onsubmit="return validateForm()">
-            <div class="field">
-                <label for="file" class="text-center">Enter the filename to <span style="color: #66BFBF;">download</span>:</label>
-                <input type="text" name="file" id="file" placeholder="Enter filename" />
-            </div>
-            <div class="field">
-                <input type="submit" value="Download" />
-            </div>
-        </form>
-    </div>
-</body>
+	<head>
+		<title>FTP File Download</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script>
+			function validateForm() {
+				var filename = document.getElementById("file").value;
+				if (filename == "") {
+					alert("Please enter a filename.");
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>
+			Download a File from<span style="color: #66bfbf"></span>
+			<span class="animated-text">FTP Server</span>
+		</h1>
+		<div class="form-container">
+			<form
+				class="form"
+				action="download.php"
+				method="post"
+				onsubmit="return validateForm()"
+			>
+				<div class="field">
+					<label for="file" class="text-center"
+						>Enter the filename to
+						<span style="color: #66bfbf">download</span>:</label
+					>
+					<input
+						type="text"
+						name="file"
+						id="file"
+						placeholder="Enter filename"
+					/>
+				</div>
+				<div class="field">
+					<input type="submit" value="Download" />
+				</div>
+			</form>
+		</div>
+	</body>
 </html>
