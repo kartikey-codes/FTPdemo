@@ -75,15 +75,23 @@ To contribute, please follow these steps:
 
 1. **Fork this repository** to your GitHub account.
 
-2. Create a new branch for your contribution: `git checkout -b branch-name`
+2. **Clone** the repository and move inside it   
+    `git clone https://github.com/<your-account>/FTPdemo.git && cd FTPdemo`
 
-3. Make your changes and commit them with a descriptive message: `git commit -m "Add feature: [Description of your changes]"`
+3. Create a new branch for your contribution:  
+     `git checkout -b branch-name`
 
-4. Push your changes to your fork: `git push origin feature/add-new-feature`
+4. Make your changes and then do the following: 
 
-5. Create a **pull request (PR)** to merge your changes into the main repository..
+    `git add .`  
+    `git commit -m "Add feature: [Description of your changes]"`
 
-6. Await review from the maintainer, and I will handle the merging process.
+5. Push your changes to your fork:  
+     `git push origin feature/add-new-feature`
+
+6. Create a **pull request (PR)** to merge your changes into the main repository..
+
+7. Await review from the maintainer, and I will handle the merging process.
 
 To get approval of the pull request much quicker and faster follow me, don't forget to star this repository to show your support!
 Thank you for your valuable contributions to the FTPDemo project! Your efforts help make this project even better.
