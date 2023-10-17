@@ -87,7 +87,7 @@ To contribute, please follow these steps:
     `git commit -m "Add feature: [Description of your changes]"`
 
 5. Push your changes to your fork:  
-     `git push origin feature/add-new-feature`
+     `git push origin branch-name`
 
 6. Create a **pull request (PR)** to merge your changes into the main repository..
 
