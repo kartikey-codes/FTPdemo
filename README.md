@@ -71,7 +71,7 @@ Welcome to the Hacktoberfest 2023 contributions for this project! We appreciate 
 
 7. **Performance Improvements**: Optimize the code for improved performance and efficiency.
 
-To contribute, please follow these steps:
+## Getting Started
 
 1. **Fork this repository** to your GitHub account.
 
@@ -94,5 +94,13 @@ To contribute, please follow these steps:
 7. Await review from the maintainer, and I will handle the merging process.
 
 To get approval of the pull request much quicker and faster follow me, don't forget to star this repository to show your support!
+
+## Contributing
+
+To start contributing, check out [CONTRIBUTING.md](https://github.com/kartikey-codes/FTPdemo/blob/main/CONTRIBUTING.md)  
 Thank you for your valuable contributions to the FTPDemo project! Your efforts help make this project even better.
+
+## License
+
+The project is licensed under [MIT](https://github.com/kartikey-codes/FTPdemo/blob/main/LICENSE)
 
