@@ -7,6 +7,9 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column-reverse;
   }
   
   .container {
