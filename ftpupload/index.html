@@ -7,7 +7,16 @@
         function validateForm() {
             var fileInput = document.getElementById("file");
             if (fileInput.value === "") {
-                alert("Please select a file.");
+                
+                const html = `<div class="alert-box error"><span>error: </span>Please select a file.</div>`
+                const mainDiv =  document.getElementById('main');
+                mainDiv.insertAdjacentHTML('afterbegin', html);
+
+                setTimeout(function () {
+                    const alertBoxes = document.querySelectorAll('.alert-box')
+                    alertBoxes.forEach(alertBox => alertBox.remove());
+                }, 3000);
+
                 return false;
             }
             return true;
