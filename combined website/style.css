@@ -8,7 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-wrap: nowrap;
-    align-items: center;
+
     flex-direction: column-reverse;
   }
   
@@ -68,4 +68,21 @@ body {
     margin-top: 10px;
   }
 
- 
+  .upload-form{
+
+    background-color: #ffffff;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  .download-form{
+
+    background-color: #ffffff;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+  }
+
