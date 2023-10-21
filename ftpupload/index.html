@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>FTP File-Upload</title>
     <script>
         function validateForm() {
@@ -28,10 +28,14 @@
         <h1>Upload a File to FTP Server</h1>
         <div id="upload_form">
             <form action="upload.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
-                <label for="file" class="file-input">Select a file</label>
-                <input type="file" name="file" id="file">
                 <br>
-                <input type="submit" value="Upload">
+                <label for="images" class="drop-container" id="dropcontainer">
+                    <span class="drop-title">Drop files here</span>
+                    or
+                    <label for="file" class="file-input">Select a file</label>
+                    <input type="file" name="file" id="file">
+                </label>
+                <input type="submit" value="Upload" class="upload-button">
             </form>
             <div id="message" style="display:none;"></div>
         </div>
