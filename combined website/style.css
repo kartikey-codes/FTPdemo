@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
@@ -8,81 +9,74 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-wrap: nowrap;
-
     flex-direction: column-reverse;
-  }
-  
-  .container {
+}
+
+/* Container Styles */
+.container {
     text-align: center;
     background-color: #ffffff;
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px solid #000; /* You can use shorthand for black color */
     border-radius: 10px;
     padding: 20px;
     max-width: 400px;
+}
 
-  }
-  
-  #heading h1 {
+/* Heading Styles */
+#heading h1 {
     font-size: 24px;
-  }
-  
-  .choice {
+}
+
+/* Choice Styles */
+.choice {
     margin-top: 20px;
-  }
-  
-  #upload_div,
-  #download_div {
+}
+
+/* Upload and Download Button Styles */
+#upload_div, #download_div {
     display: inline-block;
     margin: 0 10px;
+}
 
-  }
-  
-  .forms {
-    display: none;
-  }
-  
-  #back_div {
-    text-align: left;
-  }
-  
-
-  
-  #upload:hover,
-  #download:hover {
+#upload:hover, #download:hover {
     background-color: rgb(255, 0, 0);
-    transform:scale(1.2);
-    transition : transform 0.125s ease-in-out;
-      
-  }
-  input[type="button"]{
+    transform: scale(1.2);
+    transition: transform 0.125s ease-in-out;
+}
+
+/* Button Styles */
+input[type="button"] {
     border-radius: 15%;
-    border-color: #ffffff;
+    border-color: #fff; /* You can use shorthand for white color */
+}
 
-  }
-
-  h1 {
+/* Header Styles */
+h1 {
     font-size: 20px;
-  }
-  
-  .file-input {
+}
+
+/* File Input Styles */
+.file-input {
     margin-top: 10px;
-  }
+}
 
-  .upload-form{
-
+/* Form Styles */
+.upload-form, .download-form {
     background-color: #ffffff;
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px solid #000;
     border-radius: 10px;
     padding: 20px;
     max-width: 400px;
-  }
+}
 
-  .download-form{
+/* Additional Styles */
+#back_div {
+    text-align: left;
+}
 
-    background-color: #ffffff;
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 400px;
-  }
-
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+}
