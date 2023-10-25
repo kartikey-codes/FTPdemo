@@ -8,7 +8,7 @@ Before running this project, you need to have XAMPP installed on your system. XA
 
 ## Installation
 
-1. **Clone the Repository:**
+1. **Clone the Repository**
 ```
 $ git clone https://github.com/kartikey-codes/FTPdemo.git
 ```
@@ -16,7 +16,7 @@ $ git clone https://github.com/kartikey-codes/FTPdemo.git
 
 After cloning the repository, copy the entire `ftpdemo` folder to your XAMPP `htdocs` directory. By default, the `htdocs` directory is located at `C:\xampp\htdocs` on Windows.
 
-3. **Start XAMPP:**
+3. **Start XAMPP**
 
 Start the XAMPP control panel and ensure that the Apache server is running.
 
