@@ -1,14 +1,17 @@
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kartikey-codes/FTPdemo?style=for-the-badge)](https://github.com/yashrajmani/)
+[![LAST COMMIT](https://img.shields.io/github/last-commit/kartikey-codes/FTPdemo?style=for-the-badge)](https://github.com/yashrajmani/)
+[![Languages](https://img.shields.io/github/languages/count/kartikey-codes/FTPdemo?style=for-the-badge)](https://github.com/yashrajmani/)
+[![Follow Me on GitHub:](https://img.shields.io/github/followers/kartikey-codes?style=for-the-badge)](https://github.com/yashrajmani/)
+[![GitHub Repo Size](https://img.shields.io/github/repo-size/kartikey-codes/FTPdemo?style=for-the-badge)](https://github.com/yashrajmani/)
+
+
 # FTPDemo Repository
-Welcome to the FTPDemo Repository, a comprehensive demonstration of how to efficiently upload and download files from an FTP server using PHP. Our repository is organized into two primary folders: 'ftpupload' for the process of uploading files to the FTP server and 'ftpdownload' for the retrieval of files from the FTP server.
+
+This repository is a demonstration of how to upload and download files from an FTP server using PHP. It consists of two main folders: `ftpupload` for uploading files to the FTP server and `ftpdownload` for downloading files from the FTP server.
 
 ## Prerequisites
 
-To ensure the seamless execution of this project, it is essential to meet the following prerequisite:
-
-**XAMPP Installation**: Before initiating this project, you must have XAMPP installed on your local system. XAMPP is a cost-free and open-source, cross-platform web server solution stack package that streamlines web development. You can conveniently download and install XAMPP from the following source: [XAMPP Official Website](https://www.apachefriends.org/index.html).
-
-With the prerequisites met, you'll be well-prepared to explore the FTPDemo Repository and gain a deeper understanding of FTP file operations using PHP. Happy coding!
-
+Before running this project, you need to have XAMPP installed on your system. XAMPP is a free and open-source cross-platform web server solution stack package. You can download and install XAMPP from [here](https://www.apachefriends.org/index.html).
 
 ## Installation
 
