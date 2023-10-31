@@ -1,15 +1,15 @@
-
+/* Reset default styles and set up the document layout */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-wrap: nowrap;
-    flex-direction: column-reverse;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-wrap: nowrap;
 }
 
 /* Container Styles */
